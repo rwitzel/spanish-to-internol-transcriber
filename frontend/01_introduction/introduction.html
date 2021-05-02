@@ -1,6 +1,7 @@
 <div class="business_letter" ng-controller="transcriberCtrl">
     <p class="pull-right text-right logo">
-        <a href="https://www.misti-verlag.de/linguistik-sprachwissenschaft/inter%C3%B1ol-dr-h%C3%A9ctor-calle/"><img src="01_introduction/img/internol_logo_small.jpg" width="200" /></a>
+        <a href="https://www.misti-verlag.de/linguistik-sprachwissenschaft/inter%C3%B1ol-dr-h%C3%A9ctor-calle/"
+            title="Link to book"><img src="01_introduction/img/internol_logo_small.jpg" width="200" /></a>
     </p>
 
     <h1>Spanish to Interñol Transcriber</h1>
@@ -16,15 +17,15 @@
             <form>
                 <div class="form-group">
                     <label for="spanish_text">Spanish text</label>
-                    <textarea id="spanish_text" class="form-control" rows="20" ng-model="params.spanish_text"></textarea>
+                    <textarea id="spanish_text" class="form-control" rows="10" ng-model="params.spanish_text"></textarea>
                 </div>
             </form>
         </div>
         <div class="col-md-6">
             <form>
                 <div class="form-group">
-                    <label for="internol_text">Internol text</label>
-                    <textarea id="internol_text" readonly class="form-control" rows="20" ng-model="internol_text"></textarea>
+                    <label for="internol_text">Interñol text</label>
+                    <textarea id="internol_text" readonly class="form-control" rows="10" ng-model="internol_text"></textarea>
                 </div>
             </form>
         </div>
@@ -32,8 +33,44 @@
 
     <h3>Rules to apply</h3>
 
-    <p>RULES here</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th ng-repeat="column_header in ['Active', 'Description', 'Status', 'Tags']">
+                {{column_header}}
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="rule in params.rules track by $index">
+            <td>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="rule.active">
+                    </label>
+                </div>
+            </td>
+            <td>{{rule.description}}</td>
+            <td>{{rule.status}}</td>
+            <td>{{rule.tags.join()}}</td>
+        </tr>
+        </tbody>
+    </table>
 
 </div>
+
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
+<br/>&nbsp;
 
 
