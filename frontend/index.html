@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Spanish texts to Interñol Transcriber</title>
+
+    <!-- shared resources -->
+    <link  href="favicon.ico?" rel="shortcut icon" type="image/x-icon">
+    <script src="00_common/lib/jquery-1.11.3.min.js"></script>
+    <link  href="00_common/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="00_common/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="00_common/lib/angular.min.js"></script>
+    <link  href="00_common/common.css" rel="stylesheet">
+
+    <!-- module-specific styles -->
+    <link href="01_introduction/introduction.css" rel="stylesheet">
+    <link href="07_plugins/plugins.css" rel="stylesheet">
+    <link href="10_object_editor/lib/json-syntaxhighlighting.css" rel="stylesheet">
+    <link href="10_object_editor/object_editor.css" rel="stylesheet">
+</head>
+<body>
+
+    <div ng-app="prototypeApp">
+        <div class="container">
+            <div class="row dd-lg-flex-box">
+                <div class="col-lg-12 col-sm-12 dd-lg-flex-item">
+
+                    <div ng-include="'01_introduction/introduction.html'"></div>
+                    <div ng-include="'02_html/html.html'"></div>
+                    <div ng-include="'03_css/css.html'"></div>
+                    <div ng-include="'04_angularjs/angularjs.html'"></div>
+                    <div ng-include="'05_work_with_lists/work_with_lists.html'"></div>
+                    <div ng-include="'06_display_formulas/display_formulas.html'"></div>
+                    <div ng-include="'07_plugins/plugins.html'"></div>
+                    <div ng-include="'08_good_practice/good_practice.html'"></div>
+                    <div ng-include="'09_backend_calls/backend_calls.html'"></div>
+                    <div ng-include="'10_object_editor/object_editor.html'"></div>
+                    <div ng-include="'11_javascript/javascript.html'"></div>
+                    <div ng-include="'12_error_handling/error_handling.html'"></div>
+
+                    <div class="end_of_page_spacer">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- shared code -->
+    <script src="00_common/common.js"></script>
+    <script src="00_common/object_store.js"></script>
+    <script src="00_common/fetch_api_error_handler.js"></script>
+    <script src="00_common/app.js"></script>
+
+    <!-- module-specific code -->
+    <script src="03_css/css.js"></script>
+
+    <script src="04_angularjs/angularjs.js"></script>
+
+    <script src="05_work_with_lists/work_with_lists.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript" async ></script>
+    <script src="06_display_formulas/display_formulas.js"></script>
+
+    <script src="07_plugins/lib/angularjs-dropdown-multiselect.min.js"></script>
+    <script src="07_plugins/lib/Chart.min.js"></script>
+    <script src="07_plugins/lib/angular-chart.min.js"></script>
+    <script src="07_plugins/lib/jquery.toc.min.js"></script>
+    <script src="07_plugins/plugins.js"></script>
+
+    <script src="09_backend_calls/command1_fetcher.js"></script>
+    <script src="09_backend_calls/backend_calls.js"></script>
+
+    <script src="10_object_editor/lib/json-syntaxhighlighting.js"></script>
+    <script src="10_object_editor/object_editor.js"></script>
+
+    <script src="12_error_handling/error_handling.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<div class="business_letter module7" ng-controller="pluginsCtrl">
+
+    <h2>Plugins</h2>
+
+    <h3>Native Plugins</h3>
+
+    <p>Just include the downloaded plugin (usually just a JavaScript file) in the index.html</p>
+
+    <p>Then register the directive in the application.</p>
+
+    <p>
+        Example: The plugin
+        <a href="http://dotansimha.github.io/angularjs-dropdown-multiselect/docs/#/main">AngularJS Dropdown Multiselect</a>
+        is using Bootstrap.
+    </p>
+
+    <div ng-dropdown-multiselect=""
+         options="countries"
+         selected-model="selected_countries">
+    </div>
+
+    <h3>Wrappers</h3>
+
+    <p>
+        Example: The jQuery plugin
+        <a href="http://jtblin.github.io/angular-chart.js/">Charts.js</a>
+        can be used in AngularJS via wrapper.
+    </p>
+
+    <canvas class="chart chart-line"
+        chart-data="chart.data"
+        chart-labels="chart.labels"
+        chart-series="chart.series"
+        chart-options="chart.options"
+        chart-dataset-override="chart.datasetOverride">
+    </canvas>
+
+    <h3>jQuery</h3>
+
+    <p>
+        You must create a directive to
+        <a href="https://amitgharat.wordpress.com/2013/02/03/an-approach-to-use-jquery-plugins-with-angularjs/">link</a>
+        jQuery with AngularJS.
+    </p>
+
+    <p>
+        Example: The jQuery plugin
+        <a href="https://ndabas.github.io/toc/">jquery.toc</a>
+        creates from the headline markup in the page a table of contents.
+        Note that the headlines of the subsequent sections are missing.
+    </p>
+
+    <div toc class="toc"></div>
+
+</div>

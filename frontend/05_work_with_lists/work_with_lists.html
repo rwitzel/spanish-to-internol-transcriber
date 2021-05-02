@@ -1,0 +1,70 @@
+<div class="business_letter module4" ng-controller="workwithlistsCtrl">
+
+    <h2>Lists</h2>
+
+    <h3>Board Games</h3>
+
+    <form class="col-lg-4 col-sm-4 pull-right">
+        <div class="input-group">
+          <span class="input-group-addon" id="inp_filter_games_addon"><i class="glyphicon glyphicon-search"></i></span>
+          <input type="text" class="form-control" aria-describedby="inp_filter_games_addon"
+                 ng-model="filter_expr" placeholder="your filter expression here">
+        </div>
+    </form>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th ng-repeat="column_header in ['Name', 'Year Published', 'Actions']">
+                    {{column_header}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="board_game in filter_games(board_games) track by $index"
+                ng-class="{info : selected_board_game == board_game}">
+                <td>{{board_game.name}}</td>
+                <td>{{board_game.year_published}}</td>
+                <td>
+                    <i class="glyphicon glyphicon-zoom-in"
+                       ng-click="show_board_game_details(board_game)"
+                       title="Show board game details"/>
+                    <i class="glyphicon glyphicon-remove"
+                       ng-click="remove_board_game(board_game)"
+                       title="Remove board game from list"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div ng-if="selected_board_game" class="row">
+        <div class="well col-lg-10 col-sm-10 col-lg-offset-1 col-sm-offset-1">
+
+            <div class="col-lg-5 col-sm-5">
+
+                <h3 class="text-center">{{selected_board_game.name}}</h3>
+
+                <dl class="dl-horizontal">
+                    <dt>Published</dt>
+                    <dd>{{selected_board_game.publisher}}, {{selected_board_game.year_published}}</dd>
+                    <dt>Rating</dt>
+                    <dd>{{selected_board_game.rating}}</dd>
+                    <dt>Categories</dt>
+                    <dd>
+                        <span ng-repeat="category in selected_board_game.categories">
+                            {{category}}<span ng-if="$index < selected_board_game.categories.length - 1">,</span>
+                        </span>
+                    </dd>
+                </dl>
+
+            </div>
+
+            <div class="col-lg-5 col-sm-5 text-center">
+                <img ng-src="{{selected_board_game.image}}" height="200">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

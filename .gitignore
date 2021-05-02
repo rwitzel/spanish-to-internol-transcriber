@@ -1,1 +1,9 @@
 .idea
+*.iml
+_site
+*.ipynb
+__pycache__
+Gemfile.lock
+backend/cache
+
+.jekyll-cache
