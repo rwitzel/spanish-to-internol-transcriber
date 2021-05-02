@@ -1,4 +1,4 @@
-<div class="business_letter">
+<div class="business_letter" ng-controller="transcriberCtrl">
     <p class="pull-right text-right logo">
         <a href="https://www.misti-verlag.de/linguistik-sprachwissenschaft/inter%C3%B1ol-dr-h%C3%A9ctor-calle/"><img src="01_introduction/img/internol_logo_small.jpg" width="200" /></a>
     </p>
@@ -9,11 +9,26 @@
 
     <p>Transcribes Spanish texts to Interñol in the browser (offline use possible).</p>
 
-    <h3>Transscriber</h3>
+    <h3>Transcribe</h3>
 
-    <p>FORM here</p>
-
-    <p>OUTPUT here</p>
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="spanish_text">Spanish text</label>
+                    <textarea id="spanish_text" class="form-control" rows="20" ng-model="params.spanish_text"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label for="internol_text">Internol text</label>
+                    <textarea id="internol_text" readonly class="form-control" rows="20" ng-model="internol_text"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <h3>Rules to apply</h3>
 
