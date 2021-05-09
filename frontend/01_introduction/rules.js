@@ -87,7 +87,7 @@ function to_internol_text(spanish_text, rules) {
             const rule = rules[i] ;
             if (rule.active) {
                 new_word = rule.applier(word);
-                if (new_word != word) {
+                if (new_word !== word) {
                     if (applied_rules[rule.id]) {
                         applied_rules[rule.id].push(word);
                     }
@@ -103,7 +103,7 @@ function to_internol_text(spanish_text, rules) {
     });
     const internol_text = internol_words.join(" ");
     return [internol_text, applied_rules];
-};
+}
 
 // for temporary tests:
 console.log(to_internol_text("hoven aventura vender", rules));
