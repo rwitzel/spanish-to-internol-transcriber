@@ -34,7 +34,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th ng-repeat="column_header in ['Active', 'Description', 'Status', 'Tags']">
+            <th ng-repeat="column_header in ['Active', 'Description']">
                 {{column_header}}
             </th>
         </tr>
@@ -49,8 +49,6 @@
                 </div>
             </td>
             <td>{{rule.description}}</td>
-            <td>{{rule.status}}</td>
-            <td>{{rule.tags.join()}}</td>
         </tr>
         </tbody>
     </table>
