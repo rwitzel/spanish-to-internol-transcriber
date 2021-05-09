@@ -1,5 +1,5 @@
 # Jekyll config file for GitHub pages
 exclude:
-  - backend/
+  - spanish_nouns_downloader/
   - docker-compose.yml
   - README.md

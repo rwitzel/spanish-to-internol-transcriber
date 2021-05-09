@@ -4,6 +4,6 @@ _site
 *.ipynb
 __pycache__
 Gemfile.lock
-backend/cache
-
+venv
 .jekyll-cache
+/es-en.xml
