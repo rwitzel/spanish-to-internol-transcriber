@@ -56,3 +56,32 @@ const rules = [
     crr("hu", "u", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("TODO", "ka", "No. 2 Fonema /k/. ", "COMPLETE", [])
 ]
+
+function to_internol_text(spanish_text, rules) {
+    const spanish_words = spanish_text.split(" ");
+    const applied_rules = {};
+    const internol_words = spanish_words.map((word) => {
+        for (let i = 0; i < rules.length; i++) {
+            const rule = rules[i] ;
+            if (rule.active) {
+                new_word = rule.applier(word);
+                if (new_word != word) {
+                    if (applied_rules[rule.id]) {
+                        applied_rules[rule.id].push(word);
+                    }
+                    else {
+                        applied_rules[rule.id] = [word];
+                    }
+
+                }
+                word = new_word;
+            }
+        }
+        return word;
+    });
+    const internol_text = internol_words.join(" ");
+    return [internol_text, applied_rules];
+};
+
+// for temporary tests:
+console.log(to_internol_text("hoven vender", rules));

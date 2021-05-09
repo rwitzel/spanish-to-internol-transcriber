@@ -1,14 +1,15 @@
 app.controller('transcriberCtrl', ($scope) => {
     $scope.params = {
-        "spanish_text" : "",
+        "spanish_text" : "hoven vender",
         "rules": rules
     }
     $scope.internol_text = ""
+    $scope.applied_rules = {}
 
     const on_params_change = function() {
-        const spanish_words = $scope.params.spanish_text.split(" ");
-        const internol_words = spanish_words; // TODO .map()
-        $scope.internol_text = internol_words.join(" ");
+        const result = to_internol_text($scope.params.spanish_text, $scope.params.rules);
+        $scope.internol_text = result[0];
+        $scope.applied_rules = result[1];
     };
 
     $scope.$watch("params", on_params_change, true);
