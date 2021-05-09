@@ -1,7 +1,7 @@
 function create_upppercase_rule() {
     const spanish_nouns_set = new Set(spanish_nouns);
 
-    function replace(word, context) {
+    function replace(word,) {
         if (spanish_nouns_set.has(word)) {
             word = word.substring(0, 1).toUpperCase() + word.substring(1);
         }
@@ -19,7 +19,7 @@ function create_upppercase_rule() {
 }
 
 function create_replacement_rule(to_be_replaced, replacement, description, status, tags) {
-    function replace(word, context) {
+    function replace(word) {
         word = word.replaceAll(to_be_replaced, replacement);
         // preserving case
         word = word.replaceAll(to_be_replaced.substring(0,1).toUpperCase() + to_be_replaced.substring(1),
