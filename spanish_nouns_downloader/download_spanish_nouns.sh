@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # call it from the project's root folder
+# it contains only 2392 nouns, use a better source, like MCR (using WordNet 3.0 as ILI)
 curl --output es-en.xml https://raw.githubusercontent.com/mananoreboton/en-es-en-Dic/master/src/main/resources/dic/es-en.xml
 
 FILE=frontend/01_introduction/spanish_nouns.js
