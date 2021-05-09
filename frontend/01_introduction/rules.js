@@ -1,8 +1,30 @@
+function create_upppercase_rule() {
+    const spanish_nouns_set = new Set(spanish_nouns);
+
+    function replace(word, context) {
+        if (spanish_nouns_set.has(word)) {
+            word = word.substring(0, 1).toUpperCase() + word.substring(1);
+        }
+        return word
+    }
+
+    return {
+        "active": true,
+        "id": "uppercase",
+        "description": "Nouns are uppercase.",
+        "tags": [],
+        "status": "INCOMPLETE",
+        "applier": replace
+    }
+}
+
 function create_replacement_rule(to_be_replaced, replacement, description, status, tags) {
     function replace(word, context) {
-        // TODO preserve case https://stackoverflow.com/questions/17264639/replace-text-but-keep-case
-        // and handle removed first case "h" so that the second case becomes upper case
-        return word.replaceAll(to_be_replaced, replacement);
+        word = word.replaceAll(to_be_replaced, replacement);
+        // preserving case
+        word = word.replaceAll(to_be_replaced.substring(0,1).toUpperCase() + to_be_replaced.substring(1),
+                               replacement.substring(0,1).toUpperCase() + replacement.substring(1));
+        return word;
     }
 
     return {
@@ -15,11 +37,11 @@ function create_replacement_rule(to_be_replaced, replacement, description, statu
     }
 }
 
-
 const crr = create_replacement_rule
 
 // avoid regular expression to provide the most expressive statistics for specific rules
 const rules = [
+    create_upppercase_rule(),
     crr("va", "ba", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("ve", "be", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vi", "bi", "No. 1 Fonema /b/. ", "COMPLETE", []),
@@ -84,4 +106,4 @@ function to_internol_text(spanish_text, rules) {
 };
 
 // for temporary tests:
-console.log(to_internol_text("hoven vender", rules));
+console.log(to_internol_text("hoven aventura vender", rules));
