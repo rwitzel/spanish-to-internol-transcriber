@@ -77,6 +77,11 @@ const rules = [
     crr("hi", "i", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("ho", "o", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("hu", "u", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("ay", "ai", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr("ey", "ei", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr("oy", "oi", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr("uy", "ui", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr("y", "i", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr("TODO", "ka", "No. 2 Fonema /k/. ", "COMPLETE", [])
 ]
 
