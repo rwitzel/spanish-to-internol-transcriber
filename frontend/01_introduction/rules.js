@@ -118,9 +118,9 @@ function to_internol_objects(spanish_text, rules) {
     return [internol_objects, applied_rules];
 }
 
-function to_internol_html(internol_objects) {
+function to_internol_html(internol_objects, highlight_transformed_words) {
     const internol_words_as_html = internol_objects.map((internol_object) => {
-        if (internol_object.applied_rules.length == 0) {
+        if (internol_object.applied_rules.length == 0 || !highlight_transformed_words) {
             return internol_object.new_word;
         }
         else {

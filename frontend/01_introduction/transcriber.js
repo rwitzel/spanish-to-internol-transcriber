@@ -2,7 +2,8 @@ app.controller('transcriberCtrl', ($scope) => {
     $scope.params = {
         "spanish_text" : "hoven aventura roja vender colegas",
         "rules": rules,
-        "rules_filter": ""
+        "rules_filter": "",
+        "highlight_transformed_words": true
     };
     $scope.internol_text = "";
     $scope.applied_rules = {};
@@ -15,7 +16,7 @@ app.controller('transcriberCtrl', ($scope) => {
     const on_params_change = function() {
         const result = to_internol_objects($scope.params.spanish_text, $scope.params.rules);
         $scope.internol_objects = result[0];
-        $scope.internol_html = to_internol_html(result[0]);
+        $scope.internol_html = to_internol_html(result[0], $scope.params.highlight_transformed_words);
         $scope.applied_rules = result[1];
     };
 

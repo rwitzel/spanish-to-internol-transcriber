@@ -19,7 +19,12 @@
             <h3>{{params.rules.length}} Rules</h3>
         </div>
         <div class="col-md-9">
-            <form class="pull-right">
+            <form class="pull-right form-inline">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="params.highlight_transformed_words"> Highlight transformed words &nbsp;&nbsp;
+                    </label>
+                </div>
                 <div class="input-group">
                     <span class="input-group-addon" id="inp_filter_games_addon"><i class="glyphicon glyphicon-search"></i></span>
                     <input type="text" class="form-control"
