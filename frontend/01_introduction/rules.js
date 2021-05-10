@@ -54,9 +54,9 @@ const rules = [
     crr("co", "ko", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("cu", "ku", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("acc", "ajc", "No. 3 Fonema /x/. ", "COMPLETE", []),
-    crr("ac", "aj", "No. 3 Fonema /x/. ", "COMPLETE", []),
+    crr("ac", "aj", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
     crr("ecc", "ejc", "No. 3 Fonema /x/. ", "COMPLETE", []),
-    crr("ec", "ej", "No. 3 Fonema /x/. ", "COMPLETE", []),
+    crr("ec", "ej", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
     crr("icc", "ijc", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("ic", "ij", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("occ", "ojc", "No. 3 Fonema /x/. ", "COMPLETE", []),
