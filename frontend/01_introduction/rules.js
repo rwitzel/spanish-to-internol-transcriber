@@ -2,7 +2,8 @@ function create_upppercase_rule() {
     const spanish_nouns_set = new Set(spanish_nouns);
 
     function replace(word,) {
-        if (spanish_nouns_set.has(word)) {
+        const lookup_word = word.match(/^(.*?)s?$/)[1]
+        if (spanish_nouns_set.has(lookup_word)) {
             word = word.substring(0, 1).toUpperCase() + word.substring(1);
         }
         return word
@@ -106,4 +107,4 @@ function to_internol_text(spanish_text, rules) {
 }
 
 // for temporary tests:
-console.log(to_internol_text("hoven aventura vender", rules));
+console.log(to_internol_text("hoven aventura vender colegas", rules));

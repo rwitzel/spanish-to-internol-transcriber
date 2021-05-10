@@ -1,6 +1,6 @@
 app.controller('transcriberCtrl', ($scope) => {
     $scope.params = {
-        "spanish_text" : "hoven aventura vender",
+        "spanish_text" : "hoven aventura vender colegas",
         "rules": rules
     };
     $scope.internol_text = "";
