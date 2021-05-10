@@ -82,7 +82,11 @@ const rules = [
     crr("oy", "oi", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr("uy", "ui", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr("y", "i", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
-    crr("TODO", "ka", "No. 2 Fonema /k/. ", "COMPLETE", [])
+    crr("rra", "ra", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rre", "re", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rri", "ri", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rro", "ro", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rru", "ru", "No. 9 Fonema /r/. ", "COMPLETE", [])
 ]
 
 function to_internol_objects(spanish_text, rules) {
