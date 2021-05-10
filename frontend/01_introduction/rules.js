@@ -80,15 +80,18 @@ const rules = [
     crr("TODO", "ka", "No. 2 Fonema /k/. ", "COMPLETE", [])
 ]
 
-function to_internol_text(spanish_text, rules) {
+function to_internol_objects(spanish_text, rules) {
     const spanish_words = spanish_text.split(" ");
     const applied_rules = {};
-    const internol_words = spanish_words.map((word) => {
+    const internol_objects = spanish_words.map((word) => {
+        const internol_object = { "original_word": word, "applied_rules": []};
+
         for (let i = 0; i < rules.length; i++) {
             const rule = rules[i] ;
             if (rule.active) {
                 new_word = rule.applier(word);
                 if (new_word !== word) {
+                    internol_object.applied_rules.push(rule.id);
                     if (applied_rules[rule.id]) {
                         applied_rules[rule.id].push(word);
                     }
@@ -100,11 +103,23 @@ function to_internol_text(spanish_text, rules) {
                 word = new_word;
             }
         }
-        return word;
+        internol_object.new_word = word;
+        return internol_object;
     });
-    const internol_text = internol_words.join(" ");
-    return [internol_text, applied_rules];
+    return [internol_objects, applied_rules];
+}
+
+function to_internol_html(internol_objects) {
+    const internol_words_as_html = internol_objects.map((internol_object) => {
+        if (internol_object.applied_rules.length == 0) {
+            return internol_object.new_word;
+        }
+        else {
+            return "<span class='modified' title='" + internol_object.applied_rules.join(",") + "'>" + internol_object.new_word + "</span>";
+        }
+    });
+    return internol_words_as_html.join(" ");
 }
 
 // for temporary tests:
-console.log(to_internol_text("hoven aventura vender colegas", rules));
+console.log(to_internol_objects("hoven aventura roja vender colegas", rules));

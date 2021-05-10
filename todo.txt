@@ -1,5 +1,5 @@
 By priority:
-* enable hightlighting of transformed words via contenteditable attribute for a DIV element
+* show statistics per rule and rule ID
 * complete list of rules
 * improve layout
 * provide each rule with an example
