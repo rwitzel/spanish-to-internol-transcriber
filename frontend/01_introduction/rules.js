@@ -12,7 +12,7 @@ function create_upppercase_rule() {
     return {
         "active": true,
         "id": "uppercase",
-        "description": "Nouns are uppercase.",
+        "description": "Nouns are uppercase, using a dictionary with " + spanish_nouns_set.size + " Spanish nouns.",
         "tags": [],
         "status": "INCOMPLETE",
         "applier": replace
