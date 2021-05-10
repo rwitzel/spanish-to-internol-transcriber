@@ -1,0 +1,8 @@
+* enable rule filtering
+* enable hightlighting of transformed words
+* complete list of rules
+* improve layout
+* provide each rule with an example
+* add section "background" with link to book and to rwitzel GitHub account
+* remove falsely classified words from nouns list, like "a", "una", "grande" etc., e.g. when they can be both
+  noun and adjective
