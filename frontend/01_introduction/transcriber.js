@@ -1,6 +1,6 @@
 app.controller('transcriberCtrl', ($scope) => {
     $scope.params = {
-        "spanish_text" : "hoven aventura roja vender colegas",
+        "spanish_text" : spanish_text_example,
         "rules": rules,
         "rules_filter": "",
         "highlight_transformed_words": true

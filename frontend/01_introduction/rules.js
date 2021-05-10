@@ -1,9 +1,12 @@
-function create_upppercase_rule() {
-    const spanish_nouns_set = new Set(spanish_nouns);
+const spanish_nouns_adjectives = new Set(spanish_adjectives);
+const spanish_nouns_set_wide = new Set(spanish_nouns);
+const spanish_nouns_set_narrow = new Set(spanish_nouns.filter((noun) => !spanish_nouns_adjectives.has(noun)))
 
-    function replace(word,) {
+function create_upppercase_rule(nouns_set, id, description) {
+
+    function replace(word) {
         const lookup_word = word.match(/^(.*?)s?$/)[1]
-        if (spanish_nouns_set.has(lookup_word)) {
+        if (nouns_set.has(lookup_word)) {
             word = word.substring(0, 1).toUpperCase() + word.substring(1);
         }
         return word
@@ -11,8 +14,8 @@ function create_upppercase_rule() {
 
     return {
         "active": true,
-        "id": "uppercase",
-        "description": "Nouns are uppercase, using a dictionary with " + spanish_nouns_set.size + " Spanish nouns.",
+        "id": id,
+        "description": "Nouns are uppercase, using a dictionary with " + nouns_set.size + " Spanish nouns. " + description,
         "tags": [],
         "status": "INCOMPLETE",
         "applier": replace
@@ -42,7 +45,8 @@ const crr = create_replacement_rule
 
 // avoid regular expression to provide the most expressive statistics for specific rules
 const rules = [
-    create_upppercase_rule(),
+    create_upppercase_rule(spanish_nouns_set_wide, "uppercase_wide", "All kind of nouns."),
+    create_upppercase_rule(spanish_nouns_set_narrow, "uppercase_narrow", "Nouns that are not adjectives."),
     crr("va", "ba", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("ve", "be", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vi", "bi", "No. 1 Fonema /b/. ", "COMPLETE", []),
@@ -131,4 +135,4 @@ function to_internol_html(internol_objects, highlight_transformed_words) {
 }
 
 // for temporary tests:
-console.log(to_internol_objects("hoven aventura roja vender colegas", rules));
+console.log(to_internol_objects(spanish_text_example, rules));
