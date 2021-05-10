@@ -1,5 +1,4 @@
 By priority:
-* enable rule filtering
 * enable hightlighting of transformed words via contenteditable attribute for a DIV element
 * complete list of rules
 * improve layout
