@@ -1,5 +1,6 @@
 By priority:
 * remove and move "falsely" classified words from nouns list, like "a", "una", "grande" etc., e.g. when they can be both
   noun and adjective to a new rule "uppercase for 'maybe' nouns"
+* add option is switch off highlighting
 * (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
 * (optional) provide each rule with an example (does it add value? .. it should be hidden in mobile view when space is scarce)
