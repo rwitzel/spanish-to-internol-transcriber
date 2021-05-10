@@ -23,13 +23,11 @@
         </div>
     </div>
 
-    <div ng-if="applied_rules">Applied rules: {{applied_rules}}</div>
-
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-3">
             <h3>{{params.rules.length}} Rules</h3>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
             <form class="pull-right">
                 <div class="input-group">
                     <span class="input-group-addon" id="inp_filter_games_addon"><i class="glyphicon glyphicon-search"></i></span>
@@ -43,7 +41,7 @@
     <table class="table">
         <thead>
         <tr>
-            <th ng-repeat="column_header in ['Active', 'Description']">
+            <th ng-repeat="column_header in ['Active', 'ID', 'Description', '#']">
                 {{column_header}}
             </th>
         </tr>
@@ -57,7 +55,9 @@
                     </label>
                 </div>
             </td>
+            <td>{{rule.id}}</td>
             <td>{{rule.description}}</td>
+            <td title="{{applied_rules[rule.id].join(',')}}">{{applied_rules[rule.id].length}}</td>
         </tr>
         </tbody>
     </table>

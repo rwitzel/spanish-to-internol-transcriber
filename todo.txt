@@ -1,5 +1,4 @@
 By priority:
-* show statistics per rule and rule ID
 * complete list of rules
 * improve layout
 * provide each rule with an example
