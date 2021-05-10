@@ -128,7 +128,8 @@ function to_internol_html(internol_objects, highlight_transformed_words) {
             return internol_object.new_word;
         }
         else {
-            return "<span class='modified' title='" + internol_object.applied_rules.join(",") + "'>" + internol_object.new_word + "</span>";
+            return "<span class='modified' title='" + internol_object.original_word
+                      + ": " + internol_object.applied_rules.join(",") + "'>" + internol_object.new_word + "</span>";
         }
     });
     return internol_words_as_html.join(" ");
