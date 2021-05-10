@@ -6,5 +6,5 @@ curl --output es-en.xml https://raw.githubusercontent.com/mananoreboton/en-es-en
 
 FILE=frontend/01_introduction/spanish_nouns.js
 echo "const spanish_nouns = " > $FILE
-cat es-en.xml | xq '.dic.l[0].w[] | select( (.t | startswith("{f}") ) or (.t | startswith("{m}")) ) | .c' | jq -s >> $FILE
+cat es-en.xml | xq '.dic.l[].w[] | select( (.t | startswith("{f}") ) or (.t | startswith("{m}")) ) | .c' | jq -s >> $FILE
 echo ";" >> $FILE
