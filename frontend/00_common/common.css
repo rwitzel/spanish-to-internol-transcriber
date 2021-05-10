@@ -1,28 +1,8 @@
-body {
-    background-color: #cde8f6;
+.internol_main {
+    padding-top: 50px;
+    padding-bottom:100px;
 }
 
-.business_letter {
-    border: 1px solid black;
-    margin-top:10px;
-    padding: 20px;
-    position: relative;
-    background-color: white;
-}
-
-.business_letter {
-    color:darkblue;
-}
-
-.business_letter a {
-    color: inherit;
-    border-bottom: 1px dashed darkblue;
-}
-
-.business_letter a:hover {
-    text-decoration: inherit;
-}
-
-.end_of_page_spacer {
-    padding:200px;
+.internol_footer {
+    padding: 50px;
 }

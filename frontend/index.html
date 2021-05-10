@@ -23,10 +23,27 @@
 </head>
 <body>
 
-    <div ng-app="prototypeApp">
+    <section class="bg-primary text-center">
         <div class="container">
             <div class="row dd-lg-flex-box">
                 <div class="col-lg-12 col-sm-12 dd-lg-flex-item">
+
+                    <a href="https://www.misti-verlag.de/linguistik-sprachwissenschaft/inter%C3%B1ol-dr-h%C3%A9ctor-calle/"
+                       title="Link to book"><img src="01_introduction/img/internol_logo_lowres.png" width="200" /></a>
+
+                    <h1>Spanish-to-Interñol Transcriber</h1>
+                    <p>
+                        Transcribes Spanish texts to Interñol online in the browser (offline use possible).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div ng-app="prototypeApp">
+        <div class="container">
+            <div class="row dd-lg-flex-box">
+                <div class="col-lg-12 col-sm-12 dd-lg-flex-item internol_main">
 
                     <div ng-include="'01_introduction/introduction.html'"></div>
                     <div class="end_of_page_spacer">&nbsp;</div>
@@ -35,6 +52,17 @@
         </div>
     </div>
 
+    <section class="bg-primary text-center">
+        <div class="container">
+            <div class="row dd-lg-flex-box">
+                <div class="col-lg-12 col-sm-12 dd-lg-flex-item internol_footer">
+                    <p>
+                        Thanks you for using the Spanish-to-Interñol Transcriber!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- shared code -->
     <script src="00_common/common.js"></script>
     <script src="00_common/object_store.js"></script>

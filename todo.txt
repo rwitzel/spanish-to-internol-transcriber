@@ -1,7 +1,7 @@
 By priority:
-* improve layout
+* remove unused template code
 * add section "background" with link to book and to rwitzel GitHub account
 * remove falsely classified words from nouns list, like "a", "una", "grande" etc., e.g. when they can be both
   noun and adjective
-* fix rules, like hace is transformed to aje due to rule for "ac"
+* (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
 * (optional) provide each rule with an example (does it add value? .. it should be hidden in mobile view when space is scarce)
