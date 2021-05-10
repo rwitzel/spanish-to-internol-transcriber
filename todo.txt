@@ -1,5 +1,4 @@
 By priority:
-* add apache license
 * remove and move "falsely" classified words from nouns list, like "a", "una", "grande" etc., e.g. when they can be both
   noun and adjective to a new rule "uppercase for 'maybe' nouns"
 * (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
