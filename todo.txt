@@ -1,4 +1,3 @@
-By priority:
-* remove  "falsely" classified words from nouns list, like "a", "una"
+By descending priority:
 * (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
 * (optional) provide each rule with an example (does it add value? .. it should be hidden in mobile view when space is scarce)

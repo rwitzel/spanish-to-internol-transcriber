@@ -1,6 +1,7 @@
+const spanish_no_nouns_set = new Set(spanish_no_nouns);
 const spanish_nouns_adjectives = new Set(spanish_adjectives);
-const spanish_nouns_set_wide = new Set(spanish_nouns);
-const spanish_nouns_set_narrow = new Set(spanish_nouns.filter((noun) => !spanish_nouns_adjectives.has(noun)))
+const spanish_nouns_set_wide = new Set(spanish_nouns.filter(noun => !spanish_no_nouns_set.has(noun)));
+const spanish_nouns_set_narrow = new Set(spanish_nouns.filter(noun => !spanish_no_nouns_set.has(noun) && !spanish_nouns_adjectives.has(noun)))
 
 function create_upppercase_rule(nouns_set, id, description) {
 
