@@ -1,6 +1,6 @@
-# Spanish to internol Transcriber
+# Spanish-to-Interñol Transcriber
 
-Transcribes Spanish texts to Interñol in the browser (offline use possible)
+Transcribes Spanish texts to Interñol in the browser (offline use possible).
 
 ## How to run the frontend?
 
