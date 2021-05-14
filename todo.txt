@@ -1,4 +1,5 @@
 By descending priority:
+* fix nouns before commas and dots, etc.
 * (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
 * (requires help) deal with ambiguous nouns, like "este"
 
