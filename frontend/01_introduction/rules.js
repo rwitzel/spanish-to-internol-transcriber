@@ -95,7 +95,7 @@ const rules = [
 ]
 
 function to_internol_objects(spanish_text, rules) {
-    const spanish_words = spanish_text.split(" ");
+    const spanish_words = spanish_text.split(/\s+/);
     const applied_rules = {};
     const internol_objects = spanish_words.map((word) => {
         const internol_object = { "original_word": word, "applied_rules": []};

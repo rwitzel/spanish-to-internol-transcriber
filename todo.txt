@@ -1,9 +1,8 @@
 By descending priority:
-* fix: JS error when new lines (return) in text
 * (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
 
 Nice to have:
-* preserve space, especially new lines
+* preserve space, especially new lines, or even HTML markup (when text copied from another website)
 * provide each rule with an example (does it add value? .. it should be hidden in mobile view when space is scarce)
 * allow custom rule (s1->i1, s2->i2, ...) to facilitate updates (requires local storage)
 * add feedback form
