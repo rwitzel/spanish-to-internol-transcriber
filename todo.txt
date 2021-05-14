@@ -1,5 +1,6 @@
 By descending priority:
 * (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
+* (requires help) deal with ambiguous nouns, like "este"
 
 Nice to have:
 * preserve space, especially new lines, or even HTML markup (when text copied from another website)
