@@ -1,4 +1,4 @@
-const storage_model_version = 1;
+const storage_model_version = 2;
 
 console.log("storage_model_version", storage_model_version);
 
