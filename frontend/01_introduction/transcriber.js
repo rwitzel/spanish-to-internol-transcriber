@@ -8,9 +8,10 @@ app.controller('transcriberCtrl', ($scope) => {
     $scope.internol_text = "";
     $scope.applied_rules = {};
     $scope.filter_rules = (rules, filter) => {
-        return rules.filter((rule) => {
-            return JSON.stringify(rule).indexOf(filter) >=0;
-        });
+        return rules.filter((rule) => JSON.stringify(rule).indexOf(filter) >=0);
+    };
+    $scope.num_active_rules = (rules) => {
+        return rules.filter((rule) => rule.active).length;
     };
 
     const on_params_change = function() {

@@ -3,11 +3,12 @@ By descending priority:
 * (requires help) fix rules, like hace is transformed to aje due to rule for "ac"
 
 Nice to have:
-* show: number of active rules instead just the number of rules
 * preserve space, especially new lines
 * provide each rule with an example (does it add value? .. it should be hidden in mobile view when space is scarce)
 * allow custom rule (s1->i1, s2->i2, ...) to facilitate updates (requires local storage)
 * add feedback form
 * persist rule selection (local storage)
+* allow copy of internol text (clipboard)
+* allow print of internol text
 * use more complete dictionary, e.g. http://nlp.lsi.upc.edu/freeling/index.php/node/12
   mentions 555,000 forms ("76.000 lemma-PoS combinations") (is this WordNet 3.0 as ILI?)
