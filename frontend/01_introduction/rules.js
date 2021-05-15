@@ -95,10 +95,17 @@ const rules = [
 ]
 
 function to_internol_objects(spanish_text, rules) {
-    const spanish_words = spanish_text.split(/\s+/);
+    const spanish_text_parts = split_text(spanish_text);
     const applied_rules = {};
-    const internol_objects = spanish_words.map((word) => {
-        const internol_object = { "original_word": word, "applied_rules": []};
+    const internol_objects = spanish_text_parts.map((part) => {
+        const internol_object = { "original_word": part.part, "applied_rules": []};
+
+        if (!part.is_word) {
+            internol_object.new_word = part.part;
+            return internol_object;
+        }
+
+        let word = part.part;
 
         for (let i = 0; i < rules.length; i++) {
             const rule = rules[i] ;
@@ -126,14 +133,14 @@ function to_internol_objects(spanish_text, rules) {
 function to_internol_html(internol_objects, highlight_transformed_words) {
     const internol_words_as_html = internol_objects.map((internol_object) => {
         if (internol_object.applied_rules.length == 0 || !highlight_transformed_words) {
-            return internol_object.new_word;
+            return internol_object.new_word.replaceAll("\n", "<br/>");
         }
         else {
             return "<span class='modified' title='" + internol_object.original_word
                       + ": " + internol_object.applied_rules.join(",") + "'>" + internol_object.new_word + "</span>";
         }
     });
-    return internol_words_as_html.join(" ");
+    return internol_words_as_html.join("");
 }
 
 // for temporary tests:
