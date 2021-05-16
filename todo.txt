@@ -14,3 +14,10 @@ Nice to have:
 * use more complete dictionary, e.g. http://nlp.lsi.upc.edu/freeling/index.php/node/12
   mentions 555,000 forms ("76.000 lemma-PoS combinations") (is this WordNet 3.0 as ILI?)
 * internationalize the UI, e.g. via interpolation provider, see https://stackoverflow.com/questions/12923521/angular-js-custom-delimiter
+
+Uppercase-only version:
+* mark ambiguous nouns
+
+Nice to have:
+* show editor for resolving ambiguous nouns
+* add feedback form resp. ask to create issue in github (hmm, requires github account which is cumbersome!)
