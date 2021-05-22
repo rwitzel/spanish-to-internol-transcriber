@@ -6,7 +6,7 @@ const spanish_nouns_set_narrow = new Set(spanish_nouns.filter(noun => !spanish_n
 function create_upppercase_rule(nouns_set, id, description) {
 
     function replace(word) {
-        const lookup_word = word.match(/^(.*?)s?$/)[1]
+        const lookup_word = word.match(/^(.*?)(es|s)?$/)[1]
         if (nouns_set.has(lookup_word)) {
             word = word.substring(0, 1).toUpperCase() + word.substring(1);
         }

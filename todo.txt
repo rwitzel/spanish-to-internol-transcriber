@@ -1,7 +1,5 @@
 By descending priority:
 * (requires help) fix rule implementation, like hace is transformed to aje due to rule for "ac"
-* (requires help) deal with ambiguous nouns, like "este"
-* (requires help) deal with more special plural form like mujeres
 
 Nice to have:
 * preserve HTML markup (when text copied from another website)
