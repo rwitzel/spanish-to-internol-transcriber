@@ -11,5 +11,5 @@ echo ";" >> $FILE
 
 FILE=frontend/01_introduction/spanish_adjectives.js
 echo "const spanish_adjectives = " > $FILE
-cat es-en.xml | xq '.dic.l[].w[] | select( (.t | startswith("{adj}") ) ) | .c' | jq -s >> $FILE
+cat es-en.xml | xq '.dic.l[].w[] | select( (.t | startswith("{f}") | not) and (.t | startswith("{m}") | not) ) | .c' | jq -s >> $FILE
 echo ";" >> $FILE

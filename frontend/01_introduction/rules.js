@@ -46,8 +46,8 @@ const crr = create_replacement_rule
 
 // avoid regular expression to provide the most expressive statistics for specific rules
 const rules = [
-    create_upppercase_rule(spanish_nouns_set_wide, "uppercase_wide", "All kind of nouns."),
-    create_upppercase_rule(spanish_nouns_set_narrow, "uppercase_narrow", "Nouns that are not adjectives."),
+    //create_upppercase_rule(spanish_nouns_set_wide, "uppercase_wide", "All kind of nouns."),
+    create_upppercase_rule(spanish_nouns_set_narrow, "uppercase", "Only unambiguous nouns."), // nouns that are not adjectives
     crr("va", "ba", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("ve", "be", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vi", "bi", "No. 1 Fonema /b/. ", "COMPLETE", []),
