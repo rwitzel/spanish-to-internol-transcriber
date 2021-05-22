@@ -1,5 +1,6 @@
 By descending priority:
 * (requires help) fix rule implementation, like hace is transformed to aje due to rule for "ac"
+* (requires help) deal with too restrictive rules regarding excluded nouns, e.g. interjection (like miércoles, oh etc.)
 
 Nice to have:
 * preserve HTML markup (when text copied from another website)
