@@ -18,7 +18,6 @@ Uppercase-only version:
 * name with sustantivos enmayusculizados (definitely not capitalizar!)
 * i18n texts to Spanish only (no longer English)
 * show only unambiguous nouns, i.e. ignore adjectives
-* (rejected) mark ambiguous nouns
 
 Nice to have:
 * show editor for resolving ambiguous nouns
