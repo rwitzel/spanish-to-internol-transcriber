@@ -26,9 +26,11 @@ function create_upppercase_rule(nouns_set, id, description) {
 function create_replacement_rule(to_be_replaced, replacement, description, status, tags) {
     function replace(word) {
         word = word.replaceAll(to_be_replaced, replacement);
-        // preserving case
-        word = word.replaceAll(to_be_replaced.substring(0,1).toUpperCase() + to_be_replaced.substring(1),
-                               replacement.substring(0,1).toUpperCase() + replacement.substring(1));
+        if (typeof to_be_replaced === 'string') {
+	        // preserving case
+	        word = word.replaceAll(to_be_replaced.substring(0,1).toUpperCase() + to_be_replaced.substring(1),
+	                               replacement.substring(0,1).toUpperCase() + replacement.substring(1));
+        }
         return word;
     }
 
@@ -48,7 +50,7 @@ const crr = create_replacement_rule
 const rules = [
     //create_upppercase_rule(spanish_nouns_set_wide, "uppercase_wide", "All kind of nouns."),
     create_upppercase_rule(spanish_nouns_set_narrow, "uppercase", "Only unambiguous nouns."), // nouns that are not adjectives
-    crr("ch", "ʃ", "No. X(a) Proteja la carta ch ", "AUXILIARY", []),
+    crr("ch", "ʃ", "No. X(a) Proteja la carta ch.", "AUXILIARY", []),
     crr("va", "ba", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("ve", "be", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vi", "bi", "No. 1 Fonema /b/. ", "COMPLETE", []),
@@ -83,17 +85,17 @@ const rules = [
     crr("hi", "i", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("ho", "o", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("hu", "u", "No. 7 Fonema muda. ", "COMPLETE", []),
-    crr("ay", "ai", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
-    crr("ey", "ei", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
-    crr("oy", "oi", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
-    crr("uy", "ui", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
-    crr("y", "i", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr(/[Aa]y(?![aeiou])/g, "ai", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr(/[Ee]y(?![aeiou])/g, "ei", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr(/[Oo]y(?![aeiou])/g, "oi", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr(/[Uu]y(?![aeiou])/g, "ui", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+    crr(/[Yy](?![aeiou])/g, "i", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr("rra", "ra", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rre", "re", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rri", "ri", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rro", "ro", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rru", "ru", "No. 9 Fonema /r/. ", "COMPLETE", []),
-    crr("ʃ", "ch", "No. X(b) Restaura la carta ch ", "AUXILIARY", [])
+    crr("ʃ", "ch", "No. X(b) Restaura la carta ch.", "AUXILIARY", [])
 ]
 
 function to_internol_objects(spanish_text, rules) {
