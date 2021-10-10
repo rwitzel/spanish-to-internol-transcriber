@@ -48,6 +48,7 @@ const crr = create_replacement_rule
 const rules = [
     //create_upppercase_rule(spanish_nouns_set_wide, "uppercase_wide", "All kind of nouns."),
     create_upppercase_rule(spanish_nouns_set_narrow, "uppercase", "Only unambiguous nouns."), // nouns that are not adjectives
+    crr("ch", "ʃ", "No. X(a) Proteja la carta ch ", "AUXILIARY", []),
     crr("va", "ba", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("ve", "be", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vi", "bi", "No. 1 Fonema /b/. ", "COMPLETE", []),
@@ -91,7 +92,8 @@ const rules = [
     crr("rre", "re", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rri", "ri", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rro", "ro", "No. 9 Fonema /r/. ", "COMPLETE", []),
-    crr("rru", "ru", "No. 9 Fonema /r/. ", "COMPLETE", [])
+    crr("rru", "ru", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("ʃ", "ch", "No. X(b) Restaura la carta ch ", "AUXILIARY", [])
 ]
 
 function to_internol_objects(spanish_text, rules) {
@@ -132,7 +134,7 @@ function to_internol_objects(spanish_text, rules) {
 
 function to_internol_html(internol_objects, highlight_transformed_words) {
     const internol_words_as_html = internol_objects.map((internol_object) => {
-        if (internol_object.applied_rules.length == 0 || !highlight_transformed_words) {
+        if (internol_object.applied_rules.length === 0 || !highlight_transformed_words) {
             return internol_object.new_word.replaceAll("\n", "<br/>");
         }
         else {
