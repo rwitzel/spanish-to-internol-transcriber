@@ -22015,3 +22015,5 @@ const spanish_nouns =
   "zwitterión"
 ]
 ;
+
+module.exports = spanish_nouns;

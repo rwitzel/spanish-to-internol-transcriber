@@ -24,3 +24,5 @@ console.log("3", split_text("ab  cd   "));
 console.log("4", split_text("abcd"));
 console.log("5", split_text("ab.  'cd!'"));
  */
+
+module.exports = split_text;

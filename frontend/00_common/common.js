@@ -7,3 +7,6 @@ Array.prototype.removeByValue = function(value) {
     }
     return this;
 };
+
+// only for the browser .. remove it when using proper webapp build
+const module = {};

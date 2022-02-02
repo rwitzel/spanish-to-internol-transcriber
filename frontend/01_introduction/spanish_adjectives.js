@@ -19315,3 +19315,5 @@ const spanish_adjectives =
   "zuzar"
 ]
 ;
+
+module.exports = spanish_adjectives;

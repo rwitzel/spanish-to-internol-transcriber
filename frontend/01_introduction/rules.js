@@ -1,3 +1,15 @@
+// BEGIN poor man's solution to keep simple solution for imports in browser
+try {
+    spanish_no_nouns = require("./spanish_no_nouns");
+    spanish_adjectives = require("./spanish_adjectives");
+    spanish_nouns = require("./spanish_nouns");
+    split_text = require("./text_splitter");
+}
+catch {
+    console.log("cannot import other modules via require. assuming that runtime is browser now.");
+}
+// END poor man's solution to keep simple solution for imports in browser
+
 const spanish_no_nouns_set = new Set(spanish_no_nouns);
 const spanish_nouns_adjectives = new Set(spanish_adjectives);
 const spanish_nouns_set_wide = new Set(spanish_nouns.filter(noun => !spanish_no_nouns_set.has(noun)));
@@ -23,12 +35,25 @@ function create_upppercase_rule(nouns_set, id, description) {
     }
 }
 
+// BEGIN replacement for missing string.replaceAll() in node 10.x
+function escapeRegExp(str) {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
+
+function replaceAll(str, find, replace) {
+    if (typeof to_be_replaced === 'string') {
+        find = new RegExp(escapeRegExp(find), 'g');
+    }
+    return str.replace(find, replace);
+}
+// END replacement for missing string.replaceAll() in node 10.x
+
 function create_replacement_rule(to_be_replaced, replacement, description, status, tags) {
     function replace(word) {
-        word = word.replaceAll(to_be_replaced, replacement);
+        word = replaceAll(word, to_be_replaced, replacement);
         if (typeof to_be_replaced === 'string') {
 	        // preserving case
-	        word = word.replaceAll(to_be_replaced.substring(0,1).toUpperCase() + to_be_replaced.substring(1),
+	        word = replaceAll(word, to_be_replaced.substring(0,1).toUpperCase() + to_be_replaced.substring(1),
 	                               replacement.substring(0,1).toUpperCase() + replacement.substring(1));
         }
         return word;
@@ -137,7 +162,7 @@ function to_internol_objects(spanish_text, rules) {
 function to_internol_html(internol_objects, highlight_transformed_words) {
     const internol_words_as_html = internol_objects.map((internol_object) => {
         if (internol_object.applied_rules.length === 0 || !highlight_transformed_words) {
-            return internol_object.new_word.replaceAll("\n", "<br/>");
+            return internol_object.new_word.replace(/\n/g, "<br/>");
         }
         else {
             return "<span class='modified' title='" + internol_object.original_word
@@ -148,4 +173,9 @@ function to_internol_html(internol_objects, highlight_transformed_words) {
 }
 
 // for temporary tests:
-console.log(to_internol_objects(spanish_text_example, rules));
+//console.log(to_internol_objects(spanish_text_example, rules));
+
+module.exports = {
+    rules: rules,
+    to_internol_objects: to_internol_objects
+};
