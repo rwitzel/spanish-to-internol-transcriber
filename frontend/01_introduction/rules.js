@@ -87,39 +87,48 @@ const rules = [
     crr("co", "ko", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("cu", "ku", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("acc", "ajc", "No. 3 Fonema /x/. ", "COMPLETE", []),
-    crr("ac", "aj", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
     crr("ecc", "ejc", "No. 3 Fonema /x/. ", "COMPLETE", []),
-    crr("ec", "ej", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
     crr("icc", "ijc", "No. 3 Fonema /x/. ", "COMPLETE", []),
-    crr("ic", "ij", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("occ", "ojc", "No. 3 Fonema /x/. ", "COMPLETE", []),
-    crr("oc", "oj", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("ucc", "ujc", "No. 3 Fonema /x/. ", "COMPLETE", []),
-    crr("uc", "uj", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("za", "sa", "No. 4 Fonema /θ/. ", "COMPLETE", []),
-    crr("[zc]e", "se", "No. 4 Fonema /θ/. ", "COMPLETE", []),
-    crr("[zc]i", "si", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+    crr(/[zc]e/g, "se", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+    crr(/[zc]i/g, "si", "No. 4 Fonema /θ/. ", "COMPLETE", []),
     crr("zo", "so", "No. 4 Fonema /θ/. ", "COMPLETE", []),
     crr("zu", "su", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+
+    crr("ac", "aj", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
+    crr("ec", "ej", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
+    crr("ic", "ij", "No. 3 Fonema /x/. ", "COMPLETE", []),
+    crr("oc", "oj", "No. 3 Fonema /x/. ", "COMPLETE", []),
+    crr("uc", "uj", "No. 3 Fonema /x/. ", "COMPLETE", []),
+
     crr("ge", "je", "No. 6 Fonema /x/. ", "COMPLETE", []),
     crr("gi", "ji", "No. 6 Fonema /x/. ", "COMPLETE", []),
+    crr("gí", "jí", "No. 6 Fonema /x/. ", "COMPLETE", []),
     crr("gue", "ge", "No. 5 Fonema /g/. ", "COMPLETE", []),
     crr("gui", "gi", "No. 5 Fonema /g/. ", "COMPLETE", []),
+
     crr("ha", "a", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("he", "e", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("hè", "è", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("hi", "i", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("hí", "Í", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("ho", "o", "No. 7 Fonema muda. ", "COMPLETE", []),
     crr("hu", "u", "No. 7 Fonema muda. ", "COMPLETE", []),
+
     crr(/[Aa]y(?![aeiou])/g, "ai", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr(/[Ee]y(?![aeiou])/g, "ei", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr(/[Oo]y(?![aeiou])/g, "oi", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr(/[Uu]y(?![aeiou])/g, "ui", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr(/[Yy](?![aeiou])/g, "i", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
+
     crr("rra", "ra", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rre", "re", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rri", "ri", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rro", "ro", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rru", "ru", "No. 9 Fonema /r/. ", "COMPLETE", []),
+
     crr("ʃ", "ch", "No. X(b) Restaura la carta ch.", "AUXILIARY", [])
 ]
 

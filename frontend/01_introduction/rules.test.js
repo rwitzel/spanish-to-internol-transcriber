@@ -7,6 +7,20 @@ function transform(spanish_word) {
     return result[0][0].new_word
 }
 
-test("first test (no specific meaning", () => {
-    expect(transform("naranja")).toBe("Naranja");
+let spec_2021_10_24 = [
+    ["acción", "Ajsión"],
+    ["sección", "Sejsión"],
+    ["dicción", "Dijsión"],
+    ["occidente", "Ojsidente"],
+    ["producción", "Produjsión"],
+    //["zinc", "Sink"],
+    ["zoología", "Soolojía"],
+    //["hélice", "Elise"],
+    ["híbrido", "Íbrido"]
+];
+
+spec_2021_10_24.forEach((params) => {
+    test("test " + params[0], () => {
+        expect(transform(params[0])).toBe(params[1]);
+    });
 });
