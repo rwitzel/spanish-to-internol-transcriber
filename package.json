@@ -1,0 +1,22 @@
+{
+  "name": "spanish-to-internol-transcriber",
+  "version": "0.5.0",
+  "description": "Lenguaje claro. Clear language. Simplify the access to Spanish. Online in the browser. No data collected.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwitzel/spanish-to-internol-transcriber.git"
+  },
+  "author": "rwitzel",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/rwitzel/spanish-to-internol-transcriber/issues"
+  },
+  "homepage": "https://github.com/rwitzel/spanish-to-internol-transcriber#readme",
+  "devDependencies": {
+    "jest": "^27.4.7"
+  }
+}

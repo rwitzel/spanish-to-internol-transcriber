@@ -12,3 +12,14 @@ A local webserver can be started via [docker-compose](https://docs.docker.com/co
 
     docker-compose up
     open http://127.0.0.1:8081
+
+# Operations
+
+## Running tests
+
+```commandline
+npm i jest --save-dev
+npm i jest-cli -g
+jest
+```   
+   
