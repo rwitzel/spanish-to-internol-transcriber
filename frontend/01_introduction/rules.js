@@ -76,11 +76,18 @@ const rules = [
     //create_upppercase_rule(spanish_nouns_set_wide, "uppercase_wide", "All kind of nouns."),
     create_upppercase_rule(spanish_nouns_set_narrow, "uppercase", "Only unambiguous nouns."), // nouns that are not adjectives
     crr("ch", "ʃ", "No. X(a) Proteja la carta ch.", "AUXILIARY", []),
+
     crr("va", "ba", "No. 1 Fonema /b/. ", "COMPLETE", []),
+    crr("Va", "Ba", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("ve", "be", "No. 1 Fonema /b/. ", "COMPLETE", []),
+    crr("Ve", "Be", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vi", "bi", "No. 1 Fonema /b/. ", "COMPLETE", []),
+    crr("Vi", "Bi", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vo", "bo", "No. 1 Fonema /b/. ", "COMPLETE", []),
+    crr("Vo", "Bo", "No. 1 Fonema /b/. ", "COMPLETE", []),
     crr("vu", "bu", "No. 1 Fonema /b/. ", "COMPLETE", []),
+    crr("Vu", "Bu", "No. 1 Fonema /b/. ", "COMPLETE", []),
+
     crr("ca", "ka", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("que", "ke", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("qui", "ki", "No. 2 Fonema /k/. ", "COMPLETE", []),
