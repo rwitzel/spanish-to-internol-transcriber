@@ -110,12 +110,29 @@ const rules = [
     crr("gui", "gi", "No. 5 Fonema /g/. ", "COMPLETE", []),
 
     crr("ha", "a", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Ha", "A", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("há", "á", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Há", "Á", "No. 7 Fonema muda. ", "COMPLETE", []),
+
     crr("he", "e", "No. 7 Fonema muda. ", "COMPLETE", []),
-    crr("hè", "è", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("He", "E", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("hé", "é", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Hé", "É", "No. 7 Fonema muda. ", "COMPLETE", []),
+
     crr("hi", "i", "No. 7 Fonema muda. ", "COMPLETE", []),
-    crr("hí", "Í", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Hi", "Í", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("hí", "í", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Hí", "Í", "No. 7 Fonema muda. ", "COMPLETE", []),
+
     crr("ho", "o", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Ho", "O", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("hó", "ó", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Hó", "Ó", "No. 7 Fonema muda. ", "COMPLETE", []),
+
     crr("hu", "u", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Hu", "U", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("hú", "ú", "No. 7 Fonema muda. ", "COMPLETE", []),
+    crr("Hú", "Ú", "No. 7 Fonema muda. ", "COMPLETE", []),
 
     crr(/[Aa]y(?![aeiou])/g, "ai", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
     crr(/[Ee]y(?![aeiou])/g, "ei", "No. 8 Fonema y vocálica. ", "COMPLETE", []),

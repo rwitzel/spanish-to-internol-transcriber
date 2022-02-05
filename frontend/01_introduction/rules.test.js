@@ -15,8 +15,8 @@ let spec_2021_10_24 = [
     ["producción", "Produjsión"],
     //["zinc", "Sink"],
     ["zoología", "Soolojía"],
-    //["hélice", "Elise"],
-    ["híbrido", "Íbrido"]
+    ["hélice", "Élise"], // "Elise" would be also good
+    ["híbrido", "íbrido"] // stays lower-case because it is an adjective as well
 ];
 
 spec_2021_10_24.forEach((params) => {
