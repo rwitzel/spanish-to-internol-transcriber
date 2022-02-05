@@ -13,7 +13,7 @@ let spec_2021_10_24 = [
     ["dicción", "Dijsión"],
     ["occidente", "Ojsidente"],
     ["producción", "Produjsión"],
-    //["zinc", "Sink"],
+    ["zinc", "Sink"],
     ["zoología", "Soolojía"],
     ["hélice", "Élise"], // "Elise" would be also good
     ["híbrido", "íbrido"] // stays lower-case because it is an adjective as well

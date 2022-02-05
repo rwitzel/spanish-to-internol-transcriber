@@ -91,11 +91,17 @@ const rules = [
     crr("icc", "ijc", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("occ", "ojc", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("ucc", "ujc", "No. 3 Fonema /x/. ", "COMPLETE", []),
+
     crr("za", "sa", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+    crr("Za", "Sa", "No. 4 Fonema /θ/. ", "COMPLETE", []),
     crr(/[zc]e/g, "se", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+    crr(/[ZC]e/g, "Se", "No. 4 Fonema /θ/. ", "COMPLETE", []),
     crr(/[zc]i/g, "si", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+    crr(/[ZC]i/g, "Si", "No. 4 Fonema /θ/. ", "COMPLETE", []),
     crr("zo", "so", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+    crr("Zo", "So", "No. 4 Fonema /θ/. ", "COMPLETE", []),
     crr("zu", "su", "No. 4 Fonema /θ/. ", "COMPLETE", []),
+    crr("Zu", "Su", "No. 4 Fonema /θ/. ", "COMPLETE", []),
 
     crr("ac", "aj", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
     crr("ec", "ej", "No. 3 Fonema /x/. ", "COMPLETE", []), // FIXME
@@ -145,6 +151,8 @@ const rules = [
     crr("rri", "ri", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rro", "ro", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rru", "ru", "No. 9 Fonema /r/. ", "COMPLETE", []),
+
+    crr(/c$/, "k", "c at wordend becomes K", "COMPLETE", []),
 
     crr("ʃ", "ch", "No. X(b) Restaura la carta ch.", "AUXILIARY", [])
 ]
