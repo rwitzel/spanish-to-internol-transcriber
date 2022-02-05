@@ -1,5 +1,6 @@
 By descending priority:
-* make uppercase rule the last one to simplify the regular expressions
+* (idea) make uppercase rule the last one to simplify the regular expressions
+* fix rules for all uppercase and accent combinations (more intelligent rules are needed)
 * combine rules and provide them with more meaningful descriptions
 * (requires help) deal with too restrictive rules regarding excluded nouns, e.g. interjection (like miércoles, oh etc.)
 
