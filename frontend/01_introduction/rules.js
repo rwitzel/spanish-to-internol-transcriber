@@ -89,10 +89,16 @@ const rules = [
     crr("Vu", "Bu", "No. 1 Fonema /b/. ", "COMPLETE", []),
 
     crr("ca", "ka", "No. 2 Fonema /k/. ", "COMPLETE", []),
+    crr("Ca", "Ka", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("que", "ke", "No. 2 Fonema /k/. ", "COMPLETE", []),
+    crr("Que", "Ke", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("qui", "ki", "No. 2 Fonema /k/. ", "COMPLETE", []),
+    crr("Qui", "Ki", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("co", "ko", "No. 2 Fonema /k/. ", "COMPLETE", []),
+    crr("Co", "Ko", "No. 2 Fonema /k/. ", "COMPLETE", []),
     crr("cu", "ku", "No. 2 Fonema /k/. ", "COMPLETE", []),
+    crr("Cu", "Ku", "No. 2 Fonema /k/. ", "COMPLETE", []),
+
     crr("acc", "ajc", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("ecc", "ejc", "No. 3 Fonema /x/. ", "COMPLETE", []),
     crr("icc", "ijc", "No. 3 Fonema /x/. ", "COMPLETE", []),
