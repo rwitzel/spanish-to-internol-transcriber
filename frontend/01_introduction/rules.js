@@ -171,10 +171,15 @@ const rules = [
     crr(/[Yy](?![aeiou])/g, "i", "No. 8 Fonema y vocálica. ", "COMPLETE", []),
 
     crr("rra", "ra", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rrá", "rá", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rre", "re", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rré", "ré", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rri", "ri", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rrí", "rí", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rro", "ro", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rró", "ró", "No. 9 Fonema /r/. ", "COMPLETE", []),
     crr("rru", "ru", "No. 9 Fonema /r/. ", "COMPLETE", []),
+    crr("rrú", "rú", "No. 9 Fonema /r/. ", "COMPLETE", []),
 
     crr(/c$/, "k", "c at wordend becomes K", "COMPLETE", []),
 
